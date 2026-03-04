@@ -7,3 +7,10 @@ skills:
     description: Reference template for creating spec-compliant skills in this repository.
     tags: [docs, productivity]
     maturity: template
+  - id: github-copilot/git-commit-message-skill
+    name: git-commit-message-skill
+    platform: github-copilot
+    path: skills/github-copilot/git-commit-message-skill
+    description: Draft and validate high-quality git commit messages with mandatory Conventional Commits format.
+    tags: [development, productivity]
+    maturity: beta
