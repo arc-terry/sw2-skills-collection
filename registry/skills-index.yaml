@@ -1,0 +1,9 @@
+version: 1
+skills:
+  - id: github-copilot/template-skill
+    name: template-skill
+    platform: github-copilot
+    path: skills/github-copilot/template-skill
+    description: Reference template for creating spec-compliant skills in this repository.
+    tags: [docs, productivity]
+    maturity: template
