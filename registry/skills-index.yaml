@@ -14,3 +14,10 @@ skills:
     description: Draft and validate high-quality git commit messages with mandatory Conventional Commits format.
     tags: [development, productivity]
     maturity: beta
+  - id: github-copilot/seven-day-commit-overview-skill
+    name: seven-day-commit-overview-skill
+    platform: github-copilot
+    path: skills/github-copilot/seven-day-commit-overview-skill
+    description: Generate a 7-day commit overview with branch-grouped commits and branch-level change summaries.
+    tags: [development, research, productivity]
+    maturity: beta
