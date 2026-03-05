@@ -21,6 +21,10 @@ Copilot CLI-first repository for collecting reusable agent skills, with an exten
 │   │       ├── references/
 │   │       ├── scripts/
 │   │       └── assets/
+│   │   └── git-commit-message-skill/
+│   │       ├── SKILL.md
+│   │       ├── references/
+│   │       └── assets/
 │   ├── claude-code/
 │   └── multi-agent/
 ├── LICENSE
