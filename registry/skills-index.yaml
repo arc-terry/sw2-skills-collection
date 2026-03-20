@@ -14,6 +14,13 @@ skills:
     description: Draft and validate high-quality git commit messages with mandatory Conventional Commits format.
     tags: [development, productivity]
     maturity: beta
+  - id: github-copilot/obsidian-week-review-skill
+    name: obsidian-week-review-skill
+    platform: github-copilot
+    path: skills/github-copilot/obsidian-week-review-skill
+    description: Generate and optionally save weekly Obsidian diary summaries for terry-vault-v1 from Journal/01-daily week folders.
+    tags: [productivity, knowledge-management, writing]
+    maturity: beta
   - id: github-copilot/seven-day-commit-overview-skill
     name: seven-day-commit-overview-skill
     platform: github-copilot
