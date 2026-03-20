@@ -16,15 +16,21 @@ Copilot CLI-first repository for collecting reusable agent skills, with an exten
 │   └── skills-index.yaml
 ├── skills/
 │   ├── github-copilot/
+│   │   ├── git-commit-message-skill/
+│   │   │   ├── SKILL.md
+│   │   │   ├── assets/
+│   │   │   └── references/
+│   │   ├── obsidian-week-review-skill/
+│   │   │   ├── SKILL.md
+│   │   │   ├── references/
+│   │   │   └── scripts/
+│   │   ├── seven-day-commit-overview-skill/
+│   │   │   └── SKILL.md
 │   │   └── template-skill/
 │   │       ├── SKILL.md
+│   │       ├── assets/
 │   │       ├── references/
-│   │       ├── scripts/
-│   │       └── assets/
-│   │   └── git-commit-message-skill/
-│   │       ├── SKILL.md
-│   │       ├── references/
-│   │       └── assets/
+│   │       └── scripts/
 │   ├── claude-code/
 │   └── multi-agent/
 ├── LICENSE
@@ -63,3 +69,5 @@ Tip: Copy `skills/github-copilot/template-skill/` as your starting point.
 
 - `skills/github-copilot/template-skill/`: starter template for new skills.
 - `skills/github-copilot/git-commit-message-skill/`: generates high-quality Conventional Commit messages with quality checks.
+- `skills/github-copilot/seven-day-commit-overview-skill/`: generates a 7-day commit overview grouped by branch with branch-level summaries.
+- `skills/github-copilot/obsidian-week-review-skill/`: generates and can save weekly Obsidian diary summary notes from `Journal/01-daily` week folders.
