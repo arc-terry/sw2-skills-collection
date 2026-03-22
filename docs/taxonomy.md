@@ -1,20 +1,33 @@
 # Taxonomy
 
-## Platform layers
+## Current storage model
 
-- `github-copilot` (primary): skills optimized for Copilot CLI workflows.
-- `claude-code` (secondary): skills specific to Claude Code behavior.
-- `multi-agent` (secondary): skills or references intended to be shared across agent ecosystems.
+- For now, all skills are stored under `skills/general/`.
+- Current folder path pattern: `skills/general/<skill-name>/`.
+- This keeps contribution simple while the skill count is still small.
+
+## Future categorization model
+
+- When the collection grows, skills can be moved into type-based folders:
+  `skills/<type>/<skill-name>/`.
+- Suggested future types include:
+  - `development`
+  - `automation`
+  - `research`
+  - `docs`
+  - `productivity`
+  - additional types as needed
 
 ## Naming rules
 
-- Skill folder path: `skills/<platform>/<skill-name>/`
+- Skill folder path (current): `skills/general/<skill-name>/`
 - `<skill-name>` must match `name` in `SKILL.md` frontmatter.
 - Use lowercase letters, numbers, and hyphens.
 
 ## Category tagging
 
-Within each platform, classify skills in `registry/skills-index.yaml` using tags such as:
+Even when stored in `general`, each skill should still carry meaningful tags in
+`registry/skills-index.yaml`, such as:
 
 - `development`
 - `automation`

@@ -1,6 +1,9 @@
 # sw2-skills-collection
 
-Copilot CLI-first repository for collecting reusable agent skills, with an extensible structure for Claude Code and multi-agent skills.
+Copilot CLI-first repository for reusable agent skills.
+
+Current model: all skills live under `skills/general/`.  
+When the collection grows, skills can be reorganized into more specific categories.
 
 
 ## Repository layout
@@ -15,59 +18,38 @@ Copilot CLI-first repository for collecting reusable agent skills, with an exten
 ├── registry/
 │   └── skills-index.yaml
 ├── skills/
-│   ├── github-copilot/
-│   │   ├── git-commit-message-skill/
-│   │   │   ├── SKILL.md
-│   │   │   ├── assets/
-│   │   │   └── references/
-│   │   ├── obsidian-week-review-skill/
-│   │   │   ├── SKILL.md
-│   │   │   ├── references/
-│   │   │   └── scripts/
-│   │   ├── seven-day-commit-overview-skill/
-│   │   │   └── SKILL.md
-│   │   └── template-skill/
-│   │       ├── SKILL.md
-│   │       ├── assets/
-│   │       ├── references/
-│   │       └── scripts/
-│   ├── claude-code/
-│   └── multi-agent/
+│   └── general/
+│       ├── git-commit-message-skill/
+│       ├── obsidian-week-review-skill/
+│       ├── seven-day-commit-overview-skill/
+│       └── template-skill/
 ├── LICENSE
 └── README.md
 ```
 
 ### Major folders
 
-- `skills/`: core content area; each skill lives in `skills/<platform>/<skill-name>/` with a required `SKILL.md`.
-- `registry/`: central machine-readable index (`skills-index.yaml`) used to track and discover skills.
-- `docs/`: contributor-facing documentation for taxonomy rules and skill authoring workflow.
-- `.github/`: pull request process/checklist to keep submissions consistent.
+- `skills/`: skill content. Each skill lives in `skills/general/<skill-name>/` and must include `SKILL.md`.
+- `registry/`: machine-readable index for discovery (`registry/skills-index.yaml`).
+- `docs/`: contributor guidance (`adding-a-skill.md`, `taxonomy.md`).
+- `.github/`: pull request checklist and contribution process.
 
-## Quickstart
+## Add a skill (quick start)
 
-1. Copy `skills/github-copilot/template-skill/` to a new skill folder.
-2. Update `SKILL.md` frontmatter (`name`, `description`) and instructions.
-3. Add the skill entry to `registry/skills-index.yaml`.
-4. Open a PR using `.github/pull_request_template.md` checklist.
-
-## How to add a new skill
-
-1. Create a folder under `skills/<platform>/<skill-name>/` (prefer `skills/github-copilot/` for now).
-2. Add `SKILL.md` with YAML frontmatter:
+1. Copy `skills/general/template-skill/` to a new skill folder.
+2. Update `SKILL.md` frontmatter:
    - required: `name`, `description`
    - optional: `license`, `compatibility`, `metadata`, `allowed-tools`
-3. Ensure folder name matches frontmatter `name`.
-4. Optionally add `references/`, `scripts/`, and `assets/`.
-5. Add the skill entry to `registry/skills-index.yaml`.
-6. Submit a PR and complete `.github/pull_request_template.md` checklist.
+3. Ensure folder name matches `name` in frontmatter.
+4. Add optional folders when needed: `references/`, `scripts/`, `assets/`.
+5. Register the skill in `registry/skills-index.yaml`.
+6. Open a PR and complete `.github/pull_request_template.md`.
 
-Tip: Copy `skills/github-copilot/template-skill/` as your starting point.
-
+For detailed rules, see `docs/adding-a-skill.md` and `docs/taxonomy.md`.
 
 ## Included skills
 
-- `skills/github-copilot/template-skill/`: starter template for new skills.
-- `skills/github-copilot/git-commit-message-skill/`: generates high-quality Conventional Commit messages with quality checks.
-- `skills/github-copilot/seven-day-commit-overview-skill/`: generates a 7-day commit overview grouped by branch with branch-level summaries.
-- `skills/github-copilot/obsidian-week-review-skill/`: generates and can save weekly Obsidian diary summary notes from `Journal/01-daily` week folders.
+- `skills/general/template-skill/`: starter template for new skills.
+- `skills/general/git-commit-message-skill/`: generates high-quality Conventional Commit messages with quality checks.
+- `skills/general/seven-day-commit-overview-skill/`: generates a 7-day commit overview grouped by branch with branch-level summaries.
+- `skills/general/obsidian-week-review-skill/`: generates and can save weekly Obsidian diary summary notes from `Journal/01-daily` week folders.
