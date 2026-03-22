@@ -1,30 +1,34 @@
 version: 1
 skills:
-  - id: github-copilot/template-skill
+  - id: general/template-skill
     name: template-skill
+    type: general
     platform: github-copilot
-    path: skills/github-copilot/template-skill
+    path: skills/general/template-skill
     description: Reference template for creating spec-compliant skills in this repository.
     tags: [docs, productivity]
     maturity: template
-  - id: github-copilot/git-commit-message-skill
+  - id: general/git-commit-message-skill
     name: git-commit-message-skill
+    type: general
     platform: github-copilot
-    path: skills/github-copilot/git-commit-message-skill
+    path: skills/general/git-commit-message-skill
     description: Draft and validate high-quality git commit messages with mandatory Conventional Commits format.
     tags: [development, productivity]
     maturity: beta
-  - id: github-copilot/obsidian-week-review-skill
+  - id: general/obsidian-week-review-skill
     name: obsidian-week-review-skill
+    type: general
     platform: github-copilot
-    path: skills/github-copilot/obsidian-week-review-skill
+    path: skills/general/obsidian-week-review-skill
     description: Generate and optionally save weekly Obsidian diary summaries for terry-vault-v1 from Journal/01-daily week folders.
     tags: [productivity, knowledge-management, writing]
     maturity: beta
-  - id: github-copilot/seven-day-commit-overview-skill
+  - id: general/seven-day-commit-overview-skill
     name: seven-day-commit-overview-skill
+    type: general
     platform: github-copilot
-    path: skills/github-copilot/seven-day-commit-overview-skill
+    path: skills/general/seven-day-commit-overview-skill
     description: Generate a 7-day commit overview with branch-grouped commits and branch-level change summaries.
     tags: [development, research, productivity]
     maturity: beta
