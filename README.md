@@ -6,7 +6,65 @@ Current model: all skills live under `skills/general/`.
 When the collection grows, skills can be reorganized into more specific categories.
 
 
-## Repository layout
+- [sw2-skills-collection](#sw2-skills-collection)
+  - [Usage](#usage)
+    - [User](#user)
+    - [Developer](#developer)
+    - [Maintainer](#maintainer)
+  - [Introduction](#introduction)
+    - [Repository layout](#repository-layout)
+    - [Major folders](#major-folders)
+    - [Add a skill (quick start)](#add-a-skill-quick-start)
+
+
+
+## Usage
+
+### User
+
+Download the `sw2-skills-collection` repository first:
+
+```bash
+# Example local path (customize for your environment)
+SKILL_RESOURCE_DIR="$HOME/ai/skill-resource"
+SKILL_REPO_DIR="$SKILL_RESOURCE_DIR/sw2-skills-collection"
+
+mkdir -p "$SKILL_RESOURCE_DIR"
+cd "$SKILL_RESOURCE_DIR"
+git clone https://github.com/arc-terry/sw2-skills-collection.git
+```
+
+Use Copilot CLI step by step:
+
+```bash
+# Create a daily workspace
+WORKSPACE_DIR="$HOME/ai/workspace-$(date +'%Y%m%d')"
+mkdir -p "$WORKSPACE_DIR"
+cd "$WORKSPACE_DIR"
+
+# Launch Copilot CLI
+copilot
+
+# In Copilot CLI, load and verify skills
+# (run these after Copilot starts)
+/skills add $SKILL_REPO_DIR
+/skills list
+
+# Examples
+
+```
+
+### Developer
+
+todo: to be completed
+
+### Maintainer
+
+todo: to be completed
+
+## Introduction
+
+### Repository layout
 
 ```text
 .
@@ -34,7 +92,7 @@ When the collection grows, skills can be reorganized into more specific categori
 - `docs/`: contributor guidance (`adding-a-skill.md`, `taxonomy.md`).
 - `.github/`: pull request checklist and contribution process.
 
-## Add a skill (quick start)
+### Add a skill (quick start)
 
 1. Copy `skills/general/template-skill/` to a new skill folder.
 2. Update `SKILL.md` frontmatter:
@@ -46,10 +104,3 @@ When the collection grows, skills can be reorganized into more specific categori
 6. Open a PR and complete `.github/pull_request_template.md`.
 
 For detailed rules, see `docs/adding-a-skill.md` and `docs/taxonomy.md`.
-
-## Included skills
-
-- `skills/general/template-skill/`: starter template for new skills.
-- `skills/general/git-commit-message-skill/`: generates high-quality Conventional Commit messages with quality checks.
-- `skills/general/seven-day-commit-overview-skill/`: generates a 7-day commit overview grouped by branch with branch-level summaries.
-- `skills/general/obsidian-week-review-skill/`: generates and can save weekly Obsidian diary summary notes from `Journal/01-daily` week folders.
