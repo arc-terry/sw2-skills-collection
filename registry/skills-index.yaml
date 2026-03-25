@@ -32,3 +32,11 @@ skills:
     description: Generate a 7-day commit overview with branch-grouped commits and branch-level change summaries.
     tags: [development, research, productivity]
     maturity: beta
+  - id: general/schematic-reasoner
+    name: schematic-reasoner
+    type: general
+    platform: github-copilot
+    path: skills/general/schematic-reasoner
+    description: Perform traceable circuit analysis across schematics, BOMs, GPIO tables, and datasheets with structured outputs.
+    tags: [research, docs]
+    maturity: beta
