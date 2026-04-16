@@ -40,3 +40,11 @@ skills:
     description: Perform traceable circuit analysis across schematics, BOMs, GPIO tables, and datasheets with structured outputs.
     tags: [research, docs]
     maturity: beta
+  - id: general/smux-manager-skill
+    name: smux-manager-skill
+    type: general
+    platform: github-copilot
+    path: skills/general/smux-manager-skill
+    description: Run a smux-native manager/worker workflow over tmux panes with task envelopes, sanitized context mirrors, and optional thin helper scripts.
+    tags: [development, productivity]
+    maturity: beta
