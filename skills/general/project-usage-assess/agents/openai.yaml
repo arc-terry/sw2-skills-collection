@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Usage Assess"
+  short_description: "Per-project Copilot/Codex usage report with totals"
+  default_prompt: "統計 ~/.copilot/session-state 與 ~/.codex/sessions 在指定時間窗的 project 用量，輸出含總計的 markdown table。"
