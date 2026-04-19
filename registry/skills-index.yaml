@@ -48,3 +48,11 @@ skills:
     description: Run a smux-native manager/worker workflow over tmux panes with task envelopes, sanitized context mirrors, and optional thin helper scripts.
     tags: [development, productivity]
     maturity: beta
+  - id: general/project-usage-assess
+    name: project-usage-assess
+    type: general
+    platform: github-copilot
+    path: skills/general/project-usage-assess
+    description: Aggregate per-project Copilot premium requests and Codex token usage from local session logs, then generate a markdown table with totals for usage and quota assessment.
+    tags: [development, productivity, docs]
+    maturity: beta
