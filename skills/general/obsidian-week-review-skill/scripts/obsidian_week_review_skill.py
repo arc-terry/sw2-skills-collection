@@ -21,7 +21,7 @@ BLOCKER_HEADING_KEYWORDS = (
     "blocker",
     "problem",
     "lacking",
-    "sympton",
+    "symptom",
 )
 ACTION_LINE_PREFIXES = (
     "ask ",
