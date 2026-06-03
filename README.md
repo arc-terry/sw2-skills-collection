@@ -78,8 +78,12 @@ todo: to be completed
 ├── skills/
 │   └── general/
 │       ├── git-commit-message-skill/
+│       ├── mermaid-skill/
 │       ├── obsidian-week-review-skill/
+│       ├── project-usage-assess/
+│       ├── schematic-reasoner/
 │       ├── seven-day-commit-overview-skill/
+│       ├── smux-manager-skill/
 │       └── template-skill/
 ├── LICENSE
 └── README.md

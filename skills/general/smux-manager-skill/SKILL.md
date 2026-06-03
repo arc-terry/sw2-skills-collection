@@ -113,7 +113,9 @@ Use this skill when one pane should act as a **manager agent** and coordinate on
 - If the user approves installation, use the upstream installer:
 
   ```bash
-  curl -fsSL https://shawnpana.com/smux/install.sh | bash
+  curl -fsSL https://shawnpana.com/smux/install.sh -o /tmp/smux-install.sh
+  less /tmp/smux-install.sh
+  bash /tmp/smux-install.sh
   ```
 
 - Per the upstream `ShawnPana/smux` README, this installs `tmux` when needed, the `smux` setup, and `tmux-bridge` under `~/.smux/`.

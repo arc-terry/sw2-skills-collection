@@ -13,7 +13,7 @@ Use this skill when the user wants a weekly diary summary from `terry-vault-v1`,
 
 ## Defaults
 
-- Vault root: `/mnt/d/obsidian/sync_valut/terry-vault-v1`
+- Vault root: `/mnt/d/obsidian/sync_vault/terry-vault-v1`
 - Week input: explicit week path such as `Journal/01-daily/2026/03/W12`
 - Default summary-note location: next to the week folder, for example `Journal/01-daily/2026/03/W12/2026-03-W12-summary.md`
 
