@@ -6,7 +6,9 @@ if [[ $# -ne 1 ]]; then
   exit 1
 fi
 
-runtime_dir="$(readlink -f "$1")"
+runtime_dir="$1"
+mkdir -p "$runtime_dir"
+runtime_dir="$(cd "$runtime_dir" && pwd -P)"
 context_dir="$runtime_dir/context"
 artifacts_dir="$runtime_dir/artifacts"
 
