@@ -249,7 +249,7 @@ def render_markdown(
 
     out = []
     out.append(
-        f"# Agent Usage Stats ({start_local.strftime('%Y-%m-%d')} ~ {(end_local_excl - (end_local_excl - end_local_excl)).strftime('%Y-%m-%d')})"
+        f"# Agent Usage Stats ({start_local.strftime('%Y-%m-%d')} ~ {end_local_excl.strftime('%Y-%m-%d')})"
     )
     out.append("")
     out.append(f"- Generated at: `{generated}`")
