@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-DEFAULT_VAULT_ROOT = Path("/mnt/d/obsidian/sync_valut/terry-vault-v1")
+DEFAULT_VAULT_ROOT = Path("/mnt/d/obsidian/sync_vault/terry-vault-v1")
 TASK_SECTION_ALIASES = {"tasks", "todo"}
 IGNORED_FOCUS_HEADINGS = TASK_SECTION_ALIASES | {"note", "notes"}
 BLOCKER_HEADING_KEYWORDS = (

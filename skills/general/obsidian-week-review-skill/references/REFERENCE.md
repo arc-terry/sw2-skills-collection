@@ -2,7 +2,7 @@
 
 ## Vault defaults
 
-- Vault root: `/mnt/d/obsidian/sync_valut/terry-vault-v1`
+- Vault root: `/mnt/d/obsidian/sync_vault/terry-vault-v1`
 - Daily note location pattern: `Journal/01-daily/yyyy/mm/Www`
 - Example week path: `Journal/01-daily/2026/03/W12`
 

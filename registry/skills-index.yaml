@@ -16,6 +16,14 @@ skills:
     description: Draft and validate high-quality git commit messages with mandatory Conventional Commits format.
     tags: [development, productivity]
     maturity: beta
+  - id: general/mermaid-skill
+    name: mermaid-skill
+    type: general
+    platform: github-copilot
+    path: skills/general/mermaid-skill
+    description: Generate Mermaid diagrams from natural language, partial/invalid Mermaid, or embedded Mermaid blocks.
+    tags: [docs, productivity]
+    maturity: beta
   - id: general/obsidian-week-review-skill
     name: obsidian-week-review-skill
     type: general

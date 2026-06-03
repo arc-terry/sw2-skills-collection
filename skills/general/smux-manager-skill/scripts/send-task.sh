@@ -30,6 +30,22 @@ input_ref="${8:-}"
 artifact_dir="${9:-}"
 reply_pane="$("$tmux_bridge_bin" id)"
 
+validate_envelope_token() {
+  local field_name="$1"
+  local value="$2"
+  if [[ -z "$value" || "$value" =~ [[:space:]] || "$value" =~ [\[\]] ]]; then
+    echo "Invalid ${field_name}: must be non-empty and cannot contain whitespace or '['/']'" >&2
+    exit 1
+  fi
+}
+
+validate_envelope_token "task-id" "$task_id"
+validate_envelope_token "worker-id" "$worker_id"
+validate_envelope_token "seq" "$seq"
+validate_envelope_token "context-seq" "$context_seq"
+validate_envelope_token "lease-token" "$lease_token"
+validate_envelope_token "reply-pane" "$reply_pane"
+
 escape_value() {
   local value="$1"
   value="${value//\\/\\\\}"
