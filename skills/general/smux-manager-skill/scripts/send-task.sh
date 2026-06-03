@@ -30,14 +30,27 @@ input_ref="${8:-}"
 artifact_dir="${9:-}"
 reply_pane="$("$tmux_bridge_bin" id)"
 
-message="[mgr type:TASK_ASSIGN task:${task_id} worker:${worker_id} seq:${seq} reply:${reply_pane} context_seq:${context_seq} lease_token:${lease_token}] goal=\"${goal}\""
+escape_value() {
+  local value="$1"
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  value="${value//$'\n'/ }"
+  value="${value//$'\r'/ }"
+  printf '%s' "$value"
+}
+
+goal_escaped="$(escape_value "$goal")"
+input_ref_escaped="$(escape_value "$input_ref")"
+artifact_dir_escaped="$(escape_value "$artifact_dir")"
+
+message="[mgr type:TASK_ASSIGN task:${task_id} worker:${worker_id} seq:${seq} reply:${reply_pane} context_seq:${context_seq} lease_token:${lease_token}] goal=\"${goal_escaped}\""
 
 if [[ -n "$input_ref" ]]; then
-  message+=" input=\"${input_ref}\""
+  message+=" input=\"${input_ref_escaped}\""
 fi
 
 if [[ -n "$artifact_dir" ]]; then
-  message+=" artifact_dir=\"${artifact_dir}\""
+  message+=" artifact_dir=\"${artifact_dir_escaped}\""
 fi
 
 "$tmux_bridge_bin" read "$target" 20 >/dev/null
