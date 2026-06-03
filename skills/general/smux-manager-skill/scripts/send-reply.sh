@@ -30,10 +30,22 @@ note="$8"
 reply_pane="${9:-$("$tmux_bridge_bin" id)}"
 artifact_path="${10:-}"
 
-message="[wrk type:${event_type} task:${task_id} worker:${worker_id} seq:${seq} reply:${reply_pane} context_seq:${context_seq} lease_token:${lease_token}] note=\"${note}\""
+escape_value() {
+  local value="$1"
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  value="${value//$'\n'/ }"
+  value="${value//$'\r'/ }"
+  printf '%s' "$value"
+}
+
+note_escaped="$(escape_value "$note")"
+artifact_path_escaped="$(escape_value "$artifact_path")"
+
+message="[wrk type:${event_type} task:${task_id} worker:${worker_id} seq:${seq} reply:${reply_pane} context_seq:${context_seq} lease_token:${lease_token}] note=\"${note_escaped}\""
 
 if [[ -n "$artifact_path" ]]; then
-  message+=" artifact=\"${artifact_path}\""
+  message+=" artifact=\"${artifact_path_escaped}\""
 fi
 
 "$tmux_bridge_bin" read "$target" 20 >/dev/null
