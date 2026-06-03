@@ -6,7 +6,9 @@ if [[ $# -lt 7 || $# -gt 8 ]]; then
   exit 1
 fi
 
-runtime_dir="$(readlink -f "$1")"
+runtime_dir="$1"
+mkdir -p "$runtime_dir"
+runtime_dir="$(cd "$runtime_dir" && pwd -P)"
 seq="$2"
 from="$3"
 to="$4"
