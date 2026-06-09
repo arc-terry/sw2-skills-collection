@@ -63,3 +63,11 @@ skills:
     description: Aggregate per-project Copilot premium requests and Codex token usage from local session logs, then generate a markdown table with totals for usage and quota assessment.
     tags: [development, productivity, docs]
     maturity: beta
+  - id: general/mermaid-skill
+    name: mermaid-skill
+    type: general
+    platform: github-copilot
+    path: skills/general/mermaid-skill
+    description: Generate Mermaid diagrams from natural language, partial/invalid Mermaid, or embedded Mermaid blocks. Use when the user asks to draw or produce diagrams in Mermaid.
+    tags: [docs, productivity]
+    maturity: beta
